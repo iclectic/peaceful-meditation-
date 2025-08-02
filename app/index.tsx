@@ -2,6 +2,7 @@ import { View, Text, ImageBackground, SafeAreaView } from 'react-native';
 import React from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'expo-status-bar';
+import { useTheme } from '@/contexts/ThemeContext';
 
 import beachImage from "@/assets/meditation-images/beach.webp"
 import CustomButton from '@/components/CustomButton';
@@ -10,6 +11,7 @@ import AppGradient from '@/components/AppGradient';
 
 const App = () => { 
   const router = useRouter(); 
+  const { theme } = useTheme();
   return (
     <View className="flex-1">
         <ImageBackground 
